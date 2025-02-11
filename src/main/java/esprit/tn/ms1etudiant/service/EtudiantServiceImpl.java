@@ -13,7 +13,6 @@ public class EtudiantServiceImpl implements IEtudiantService {
 
     private final EtudiantRepository etudiantRepository;
 
-    @Autowired
     public EtudiantServiceImpl(EtudiantRepository etudiantRepository) {
         this.etudiantRepository = etudiantRepository;
     }

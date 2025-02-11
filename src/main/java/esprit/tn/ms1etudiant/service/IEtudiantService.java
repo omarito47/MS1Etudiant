@@ -1,7 +1,6 @@
 package esprit.tn.ms1etudiant.service;
 
 
-import esprit.tn.ms1etudiant.dto.EtudiantDTO;
 import esprit.tn.ms1etudiant.entity.Etudiant;
 
 import java.util.List;
