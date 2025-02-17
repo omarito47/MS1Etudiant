@@ -18,7 +18,7 @@ import java.util.Optional;
 public class EtudiantController extends GenericController<EtudiantDTO> {
     private final IEtudiantService etudiantService;
     @GetMapping("/GetFoyerById/{id}")
-    public FoyerDTO getQuizById(@PathVariable String id) {
+    public FoyerDTO getFoyerById(@PathVariable String id) {
         return etudiantService.getFoyerById(id);
     }
 }

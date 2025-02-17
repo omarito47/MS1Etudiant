@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import tn.starter.shared.dto.FoyerDTO;
 
-@FeignClient(name="foyer",url = "http://localhost:8081")
+@FeignClient(name="foyers",url = "http://localhost:8081")
 
 public interface FoyerClient {
     @GetMapping("/api/foyers/getById/{id}")
