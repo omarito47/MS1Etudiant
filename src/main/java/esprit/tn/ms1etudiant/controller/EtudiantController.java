@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import tn.starter.shared.controller.GenericController;
 import tn.starter.shared.dto.EtudiantDTO;
+import tn.starter.shared.dto.FoyerDTO;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,5 +15,10 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/etudiants")
 @RequiredArgsConstructor
-public class EtudiantController extends GenericController<EtudiantDTO,Etudiant,Long> {
+public class EtudiantController extends GenericController<EtudiantDTO> {
+    private final IEtudiantService etudiantService;
+    @GetMapping("/GetFoyerById/{id}")
+    public FoyerDTO getQuizById(@PathVariable String id) {
+        return etudiantService.getFoyerById(id);
+    }
 }
